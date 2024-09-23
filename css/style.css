@@ -62,10 +62,16 @@ body {
     font-size: 16px;
     
 }
+
 .container {
     padding: 0 20px;
 }
-
+.scene__left {
+    display: none;
+}
+.scene__right {
+    display: none;
+}
 
 .header {
     background-color: rgba(149, 100, 170, 1);
@@ -368,6 +374,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center; 
+        z-index: 10;
     }
     
 
@@ -557,6 +564,7 @@ body {
 
     .profile {
         display: block;
+        z-index: 10;
         background-color: rgba(149, 100, 170, 0.1);
         border-radius: 10px;
         border: 2px solid rgba(149, 100, 170, 0.2);
@@ -650,6 +658,7 @@ body {
 
     .advantages-desc {
         display: block;
+        z-index: 5;
     }
     
     .advantages-desc__inner {
@@ -740,5 +749,41 @@ body {
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 10px;
+    }
+
+    
+}
+@media (min-width: 1440px) {
+    
+    #scene {
+        display: block;
+        position: fixed !important;
+        z-index: 1;
+        top: 25%;
+        left: -10%;
+    }
+    .scene__right {
+        display: block;
+        position: fixed!important;
+        right: 0;
+        top: 25%;
+        z-index: 1;
+    }
+}
+
+@media (min-width: 1920px) {
+    #scene {
+        display: block;
+        position: fixed !important;
+        z-index: 1;
+        top: 16%;
+        left: 0;
+    }
+    .scene__right {
+        display: block;
+        position: fixed!important;
+        right: 13px;
+        top: 16%;
+        z-index: 1;
     }
 }

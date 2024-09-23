@@ -93,3 +93,15 @@ function initializeClock(id, endtime) {
  
 var deadline = new Date(Date.parse(new Date()) + 30 * 60 * 1000);
 initializeClock("countdown", deadline);
+
+
+var scene = document.getElementById('scene');
+var sceneRight = document.getElementById('scene__right');
+var parallax = new Parallax(scene, {
+  hoverOnly: true,
+  relativeInput: true
+});
+var parallax = new Parallax(sceneRight, {
+  hoverOnly: true,
+  relativeInput: true
+});
